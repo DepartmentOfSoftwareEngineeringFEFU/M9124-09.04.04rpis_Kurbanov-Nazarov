@@ -1,0 +1,16 @@
+version: 1
+groups:
+  rhythm:
+    prefixes: [tempo_, beat_, onset_, rhythmic_, tempogram_]
+  dynamics:
+    prefixes: [rms_, peak_, crest_, dynamic_, loudness_]
+  spectrum:
+    prefixes: [spectral_, rolloff_, zcr_]
+  frequency_balance:
+    prefixes: [low_, mid_, high_, bass_, band_]
+  timbre:
+    prefixes: [mfcc_]
+  harmony:
+    prefixes: [chroma_, tonnetz_, harmonic_, key_, mode_]
+  structure:
+    prefixes: [segment_, energy_change_, feature_variability_]

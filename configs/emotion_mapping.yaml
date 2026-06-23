@@ -1,0 +1,61 @@
+version: 1
+classes:
+  happy:
+    direct:
+      happy: 5
+    tags:
+      positive: 4
+      uplifting: 4
+      fun: 4
+      hopeful: 3
+      funny: 2
+      summer: 2
+  energetic:
+    direct:
+      energetic: 5
+    tags:
+      upbeat: 4
+      action: 4
+      powerful: 4
+      sport: 3
+      party: 4
+      fast: 3
+      motivational: 2
+  calm:
+    direct:
+      calm: 5
+      relaxing: 5
+      meditative: 5
+    tags:
+      mellow: 4
+      soft: 3
+      nature: 2
+      background: 1
+      ambiental: 2
+  sad:
+    direct:
+      sad: 5
+      melancholic: 5
+    tags:
+      emotional: 1
+      ballad: 2
+      romantic: 1
+  tense:
+    direct:
+      dark: 5
+      horror: 5
+    tags:
+      dramatic: 4
+      heavy: 4
+      epic: 2
+      drama: 3
+      deep: 1
+selection:
+  minimum_score: 3
+  minimum_margin: 2
+  target_counts:
+    happy: 1000
+    energetic: 1000
+    calm: 1000
+    sad: 1000
+    tense: 1000

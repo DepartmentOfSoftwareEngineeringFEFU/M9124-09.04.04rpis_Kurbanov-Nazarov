@@ -1,0 +1,24 @@
+{
+  "version": "6.3.0",
+  "dataset_strategy": "Jamendo API, exact selected downloads only",
+  "genre_class_count": 18,
+  "emotion_class_count": 5,
+  "default_tracks_per_genre": 30,
+  "default_total_tracks": 540,
+  "audio_included": false,
+  "manifest_included": false,
+  "manifest_generated_by": "scripts/create_jamendo_20genre_manifest.py",
+  "features_per_track": 264,
+  "neural_network": false,
+  "tests": "new manifest reduction test passed; Python compileall passed; existing full suite was not rerun to completion in packaging environment",
+  "network_test_status": "Jamendo live API/download not executed because a user-specific client_id is required",
+  "genre_count": 18,
+  "tracks_per_genre": 30,
+  "target_tracks": 540,
+  "retired_genres": [
+    "neo_soul",
+    "bebop"
+  ],
+  "continue_script": "continue_after_shortage_18genres.ps1",
+  "download_reuse_policy": "Prefer already downloaded files; keep unused audio on disk"
+}
