@@ -30,7 +30,6 @@
 ## Количество треков
 
 - `100 × 20 = 2000` треков;
-- для ровно 1500 используйте `75 × 20`.
 
 ## Быстрый запуск
 
@@ -41,29 +40,11 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 python scripts\verify_installation.py
 ```
 
-Полный конвейер на 100 треков на жанр:
-
-```powershell
-.\build_jamendo_20genre_database.ps1 `
-  -ClientId "ВАШ_JAMENDO_CLIENT_ID" `
-  -TracksPerGenre 100 `
-  -DownloadWorkers 4 `
-  -FeatureWorkers 4
-```
-
-Для 1500 треков:
-
-```powershell
-.\build_jamendo_20genre_database.ps1 `
-  -ClientId "ВАШ_JAMENDO_CLIENT_ID" `
-  -TracksPerGenre 75
-```
-
 Подробная инструкция: [`START_HERE_20_GENRES.md`](START_HERE_20_GENRES.md).
 
 ## Как формируются эталонные метки
 
-Жанр принимается только при наличии подтверждения в `musicinfo.tags.genres` Jamendo. Для родительских жанров действуют исключения, чтобы, например, `death_metal` не попал одновременно в обычный `metal`, а `pop_punk` — в обычный `punk` или `pop`.
+Жанр принимается только при наличии подтверждения в `musicinfo.tags.genres`. Для родительских жанров действуют исключения, чтобы, например, `death_metal` не попал одновременно в обычный `metal`, а `pop_punk` — в обычный `punk` или `pop`.
 
 Эмоция определяется отдельно только по фактическим `musicinfo.tags.vartags`. В JSON сохраняются исходные теги, веса, итоговый класс и качество метки. Жанр не используется при определении эмоции.
 
@@ -97,15 +78,3 @@ python scripts\evaluate_profiles.py --task both
 # 8. Сайт
 python run_app.py
 ```
-
-## Важная честная проверка
-
-Узкие жанры (`bebop`, `neo_soul`, `death_metal` и некоторые другие) могут не набрать 100 треков с одновременно разрешённым скачиванием, корректным genre-tag и распознаваемым mood-tag. Строгий режим в таком случае останавливается и сохраняет отчёт. Он не заполняет дефицит случайными песнями.
-
-## Тесты
-
-```powershell
-python -m pytest -q
-```
-
-Проверено в поставке: `12 passed`.
