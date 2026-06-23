@@ -1,3 +1,4 @@
+
 # Music Genre & Emotion Analyzer v6
 
 Статистико-онтологическая система классификации музыки без нейросетей.
@@ -74,7 +75,10 @@ python scripts\build_profiles.py --task both
 
 # 7. Метрики
 python scripts\evaluate_profiles.py --task both
-
+<img width="1280" height="720" alt="photo_2026-05-03_11-48-37" src="https://github.com/user-attachments/assets/8d619370-9b95-42f2-9363-e5eafb0b2983" />
+<img width="786" height="887" alt="photo_2026-05-03_12-23-10 (2)" src="https://github.com/user-attachments/assets/ff7dc046-f2ba-4c40-a8b2-c5088cacc68d" />
+<img width="1280" height="721" alt="photo_2026-06-08_00-16-13 (3)" src="https://github.com/user-attachments/assets/82977cee-4e48-474a-b2d3-3c5e1bb966ba" />
+<img width="709" height="644" alt="photo_2026-06-08_00-16-13 (2)" src="https://github.com/user-attachments/assets/b3e23085-162a-444e-b17c-4f34b28e4417" />
 # 8. Сайт
 python run_app.py
 ```
